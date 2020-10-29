@@ -2,12 +2,12 @@
 
 Sample application that illustrates the minimal use of the Falcon framework and external API consumption.
 
-#### Requirements
+### Requirements
 
--   Python 3.9.0 (Installation with Pyenv recommended)
--   Pipenv
+-   Python 3.9.0 (installation via pyenv recommended)
+-   Pipenv (installation with brew recommended)
 
-#### Installation
+### Installation
 
 Once you satisfy the requirements, go to the project folder and run:
 
@@ -15,23 +15,33 @@ Once you satisfy the requirements, go to the project folder and run:
 pipenv install --dev
 ```
 
-#### Running the project
+### Running the project
 
-To serve the API via gunicorn run:
+To serve the API enter:
 
 ```
 pipenv run start
 ```
 
-#### Testing
+Once running try hitting a couple of paths such as:
 
-Testing is done with pytest, just type:
+```
+curl -v http://127.0.0.1:8000/
+curl -v http://127.0.0.1:8000/weather/mex
+curl -v http://127.0.0.1:8000/weather/san%20fran
+```
+
+_Note: the external weather API is very limited in terms of cities it can provide, try mostly USA cities._
+
+### Testing
+
+Testing is done with pytest, just run:
 
 ```
 pipenv run test
 ```
 
-#### Resources
+### Resources
 
 -   [Falcon - Web framework](https://github.com/falconry/falcon)
 -   [Pyenv - Python version management](https://github.com/pyenv/pyenv)
