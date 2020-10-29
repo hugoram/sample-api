@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+
+[packages]
+falcon = "*"
+gunicorn = "*"
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+start = "gunicorn main:app"
+test = "pytest tests.py"
